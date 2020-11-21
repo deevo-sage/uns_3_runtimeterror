@@ -15,7 +15,6 @@ const Bot = () => {
     const [user, setuser] = useState();
 
   return (
-    <div>
       <div className="outer-box">
         <div className="inner-box">
           <div className="message-area">
@@ -28,7 +27,10 @@ const Bot = () => {
                 <p>{bot.message.text}
             <a href={bot.message.link.href}>{bot.message.link.name}</a>
 
-                <ul>
+                <ul style={{
+                  listStyle:"none",
+                 
+                }}>
                     {bot.message.list.map((x)=>{
                         return(<li>{x}</li>)
                     })}
@@ -54,7 +56,6 @@ const Bot = () => {
           </div>
         </div>
       </div>
-    </div>
   );
 };
 export default Bot;

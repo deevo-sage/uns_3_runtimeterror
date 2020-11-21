@@ -31,7 +31,7 @@ const Admin = () => {
                             <form>
                                 <p key={key}>{x.question} ?</p>
                                
-                                <input type="text" onChange={(e) => {
+                                <input type="text" placeholder="Answer" onChange={(e) => {
                                     seta(e.target.value)
                                 }} required></input>
                                 <button className="butt" onClick={(e) => {

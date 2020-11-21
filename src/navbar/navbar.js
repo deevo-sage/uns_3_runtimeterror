@@ -22,6 +22,7 @@ const [user,setuser]=useContext(UserContext)
 </Link>}
 <a><li onClick={()=>{
 auth.signOut();
+setuser({admin:false,user:false});
 }}>Signout</li></a>
 </ul>
         </div>

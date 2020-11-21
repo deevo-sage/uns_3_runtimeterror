@@ -50,7 +50,7 @@ useEffect(() => {
     <div>  
       <UserContext.Provider value={[user, setuser]}>
 
-      <Nav/>
+  {user.user && <Nav/> }
         <Router>
     <Home path="/"/>
     <FAQ path="/FAQ"/>

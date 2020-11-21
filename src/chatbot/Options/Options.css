@@ -20,3 +20,24 @@
   font-size: 0.9rem;
   margin: 3px;
 }
+.option-item:hover {
+  padding: 8px 15px;
+  border: 1px solid #39719c;
+  border-radius: 25px;
+  background-color: aqua;
+  color: #285374;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin: 3px;
+}
+.option-item:active {
+  padding: 8px 15px;
+  border: 1px solid #39719c;
+  border-radius: 25px;
+  background-color: rgba(0, 255, 255, 0.541);
+  color: #285374;
+  cursor: pointer;
+  font-size: 0.9rem;
+  margin: 3px;
+  opacity: 0.75;
+}

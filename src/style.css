@@ -14,7 +14,7 @@ background-color: aqua;
   align-items: flex-end;
 }
 #root>div{
-  height: 75%;
+  height: 72%;
   width: 30%;
   background-color: white;
 }
@@ -100,7 +100,11 @@ width: 100%;
 .react-chatbot-kit-chat-bot-message {
   margin-left: 0;
   width: auto;
+
 } 
+.react-chatbot-kit-chat-input-container{
+  transform: translateY();
+}
 .faq>form{
   justify-content: flex-start;
   align-items: flex-start;
@@ -125,4 +129,46 @@ height: auto;
 .news>form>button{
 margin-top: 50px;
 
+}
+.sign>h2{
+color: white;
+margin-bottom: 30px;
+}
+.sign>input{
+margin-bottom: 15px;
+border-radius: 10px;
+border:none;
+padding: 5px;
+outline: none;
+transition: 0.4s;
+width: 40%;
+
+}
+.sign>input:focus{
+  box-shadow: rgba(0, 0, 0, 0.178) 2px 2px 2px 2px; 
+}
+
+.sign>button{
+  background-color: #008CBA;
+  font-size: 16px;
+  padding: 5px 12px;
+  border-radius: 8px;
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50; 
+width: 40%;
+  background:whitesmoke;
+	border: 2px solid black;
+	cursor: pointer;
+  outline: inherit;
+  transition: 0.3s;
+  margin-bottom: 15px;
+}
+.sign>button:hover{
+
+  background-color: aqua;
+}
+.sign>button:active{
+
+  background-color: rgba(0, 255, 255, 0.459);
 }

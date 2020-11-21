@@ -34,7 +34,7 @@ scholarship = () => {
 };
 placement = () => {
   const message = this.createChatBotMessage(
-    "According to record of year 2019-2020, 18 LPA by Societe Generale"
+    "According to record of year 2019-2020, highest place was 18 LPA by Societe Generale"
   );
   this.addMessageToState(message);
 };

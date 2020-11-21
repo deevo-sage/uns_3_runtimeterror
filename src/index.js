@@ -8,7 +8,7 @@ import {auth} from "./firebase"
 import UserContext from "./usercontext"
 import "./style.css";
 import Admin from "./admin/admin.jsx";
-import Events from "./events/events"
+import News from "./events/events"
 const App = () => {
   const [user, setuser] = useState({admin:false,user:false});
 useEffect(() => {
@@ -55,7 +55,7 @@ useEffect(() => {
     <Home path="/"/>
     <FAQ path="/FAQ"/>
     {user.admin && <Admin path="/admin"/>}
-    <Events path="/events"/>
+    <News path="/News"/>
         </Router>
     </UserContext.Provider>
 

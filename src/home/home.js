@@ -1,5 +1,5 @@
 import React from "react";
-import Bot from "./bot/bot";
+import Bot from "../chatbot/chatbot";
 import SignIn from "./signin";
 import {auth} from '../firebase'
 const Home = () => {

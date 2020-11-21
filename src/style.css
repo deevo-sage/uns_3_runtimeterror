@@ -14,7 +14,7 @@ background-color: aqua;
   align-items: flex-end;
 }
 #root>div{
-  height: 80%;
+  height: 75%;
   width: 30%;
   background-color: white;
 }
@@ -30,12 +30,18 @@ margin-right: 5px;
   justify-content: center;
   align-items: center;
     width: 100%;
-  height: 150px;
+  height: 200px;
   
   box-sizing: border-box;
   border-radius: 4px;
  background-color: #3DD6D0;
   resize: none;
+padding-bottom:5px ;
+
+}
+.didnt>form{
+ background-color: #3e6da1b7;
+
 }
 
 .form>form>p{
@@ -62,8 +68,9 @@ padding: 5px;
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  box-sizing: border-box;
   flex-direction: column;
+  overflow: scroll;
+  height: 68vh;
 }
 .butt{
   background-color: #008CBA;
@@ -79,10 +86,43 @@ padding: 5px;
 	cursor: pointer;
   outline: inherit;
   transition: 0.3s;
+  margin-bottom: 5px;
 }
 .butt:hover{
   background-color: aqua;
 }
 .butt:active{
   background-color: rgba(0, 255, 255, 0.459);
+}
+.react-chatbot-kit-chat-container{
+width: 100%;
+}
+.react-chatbot-kit-chat-bot-message {
+  margin-left: 0;
+  width: auto;
+} 
+.faq>form{
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: auto;
+
+}
+.faq>form>button{
+  margin-top:20px ;
+  margin-left: 36%;
+}
+.dfaq>form{
+height:auto;
+ background-color: #3e6da1b7;
+
+}
+.news>form{
+  justify-content: flex-start;
+height: auto;
+ background-color: #3ea194b7;
+
+}
+.news>form>button{
+margin-top: 50px;
+
 }

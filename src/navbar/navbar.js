@@ -13,8 +13,8 @@ const [user,setuser]=useContext(UserContext)
 <Link to="/FAQ">
   <li>FAQ</li>
 </Link>
-<Link to="/events">
-  <li>Events</li>
+<Link to="/News">
+  <li>News</li>
 </Link>
 {user.admin &&
 <Link to="/admin">

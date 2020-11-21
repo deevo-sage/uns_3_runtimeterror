@@ -1,7 +1,17 @@
 import { createChatBotMessage } from "react-chatbot-kit";
-
+import Options from "./Options/Options";
+import React from 'react'
 const config = {
-  initialMessages: [createChatBotMessage(`Hello world`)]
+botName:"Chatbot",
+  initialMessages: [createChatBotMessage(`Hello, how can i help you?`
+  ,{widget:"options"})],
+
+  widgets:[
+      {
+      widgetName: "options",
+      widgetFunc: (props) => <Options {...props} />,
+    },
+]
 }
 
 export default config

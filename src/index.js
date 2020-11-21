@@ -8,8 +8,9 @@ import {auth} from "./firebase"
 import UserContext from "./usercontext"
 import "./style.css";
 import Admin from "./admin/admin.jsx";
+import Events from "./events/events"
 const App = () => {
-  const [user, setuser] = useState({admin:false});
+  const [user, setuser] = useState({admin:false,user:false});
 useEffect(() => {
   if (auth.isSignInWithEmailLink(window.location.href)) {
   var email = window.localStorage.getItem("emailForSignIn");
@@ -29,15 +30,18 @@ useEffect(() => {
 
   auth.onAuthStateChanged((currentUser) => {
     if (currentUser) {
+      currentUser.user=true;
   if (currentUser.email == "sidsahni00@gmail.com") {
     currentUser.admin = true;
+
   }
   else{
     currentUser.admin = false;
   }
+  setuser(currentUser);
+
 }
    
-    setuser(currentUser);
        
   });
 }, []);
@@ -51,6 +55,7 @@ useEffect(() => {
     <Home path="/"/>
     <FAQ path="/FAQ"/>
     {user.admin && <Admin path="/admin"/>}
+    <Events path="/events"/>
         </Router>
     </UserContext.Provider>
 

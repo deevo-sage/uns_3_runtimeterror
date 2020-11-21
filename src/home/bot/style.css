@@ -1,0 +1,18 @@
+.outer-box{
+    height: 80vh;
+    width: 100vw;
+    display: flex;
+align-items: center;
+justify-content: flex-start;
+background-color: azure;
+}
+.inner-box{
+    height: 100%;
+    width: 70%;
+background-color: aliceblue;
+}
+.message-area{
+    background-color: bisque;
+    height: 80%;
+    width: 100%;
+}

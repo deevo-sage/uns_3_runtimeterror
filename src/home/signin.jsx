@@ -11,8 +11,7 @@ const Signin = () => {
 
     return (
         <div>
-            <h1> not balle</h1>
-            {!user && <div> <input type="text" onChange={(e) => {
+            {!user.user && <div> <input type="text" onChange={(e) => {
                 setemail(e.target.value);
             }}></input>
                 <button onClick={() => {

@@ -21,7 +21,6 @@ const Signin = () => {
 
                 }}>Signin With Email</button>
                 <button onClick={() => {
-                    JSON.stringify(auth.currentUser)
                     auth.signInWithPopup(googleAuthProvider).then(function () {
                     })
                         .catch(function (error) {

@@ -3,16 +3,77 @@
     width: 100vw;
     display: flex;
 align-items: center;
-justify-content: flex-start;
+justify-content: center;
 background-color: azure;
 }
 .inner-box{
     height: 100%;
     width: 70%;
-background-color: aliceblue;
+background-color: aliceblue;    
 }
 .message-area{
     background-color: bisque;
     height: 80%;
     width: 100%;
+
+
+}
+.message-area>div{
+width: 100%;
+background-color: #7fffd4;
+text-align: left;
+}
+.bot{
+width: 100%;
+display: flex;
+background-color: aquamarine;
+text-align: left;   
+align-items: flex-start;
+justify-content: flex-start;
+margin-top:10px;
+
+}
+.user{
+display: flex;
+width: 100%;
+background-color: aquamarine;
+text-align: right;
+align-items: flex-end;
+justify-content: flex-end;
+margin-top:10px;
+
+}
+.options-area{
+width: 100%;
+display: flex;
+flex-wrap: wrap;
+
+}
+.options-area>div{
+padding: 3px;
+margin: 3px;
+border: 3px solid gray;
+border-radius: 10px;
+transition: 0.25s;
+}
+.options-area>div:hover{
+background-color: #7fffd4;
+}
+
+.options-area>div:active{
+background-color: #17b37f;
+border-radius: 20px;
+
+}
+.user>p{
+    border: 2px solid grey;
+width: 40%;
+background-color: bisque;
+text-align: center;
+}
+.bot>p{
+    border: 2px solid grey;
+width: 40%;
+background-color: bisque;
+text-align: center;
 }

@@ -4,10 +4,8 @@ import UserContext from "../usercontext"
 import {map} from "lodash";
 const Admin = () => {
     var db = firestore.collection("FAQ");
-    const [q,setq]=useState();
-    const [a, seta] = useState();
+    const [a, seta] = useState("");
     const [list, setlist] = useState();
-   
     const [user,setuser]=useContext(UserContext);
     useEffect(async function(){
         var arr=[]    
@@ -20,7 +18,7 @@ const Admin = () => {
                 })
             })
    setlist(arr)
-    },[])
+    },[a])
     
     return (
         <div >
@@ -33,20 +31,22 @@ const Admin = () => {
                             <form>
                                 <p key={key}>{x.question} ?</p>
                                
-                                <input type="text" value={a} onChange={(e) => {
+                                <input type="text" onChange={(e) => {
                                     seta(e.target.value)
-                                }}></input>
-
+                                }} required></input>
+                                <button className="butt" onClick={(e) => {
+                                    e.preventDefault();
+                                    if(a!=""){
+                                    db.doc(x.uid).update({
+                                        answer: a
+                                    }).catch(function (error) {
+                                        console.log(error)
+                                    });
+                                    seta("")
+                                }
+                                }}>Submit</button>
                             </form>
-                            <button className="butt" onClick={() => {
-                                db.doc().update({ 
-                                    answer: a
-                                }).catch(function (error) {
-                                    console.log(error)
-                                });
-                                setq("")
-                                seta("")
-                            }}>Submit</button>
+                         
                         </div>
                     ))
                 }

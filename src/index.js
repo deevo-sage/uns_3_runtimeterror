@@ -4,13 +4,14 @@ import { Router } from "@reach/router";
 import Home from "./home/home.js";
 import FAQ from "./FAQ/FAQ"
 import Nav from "./navbar/navbar"
-import {auth} from "./firebase"
+import {auth, firestore} from "./firebase"
 import UserContext from "./usercontext"
 import "./style.css";
 import Admin from "./admin/admin.jsx";
 import News from "./events/events"
 const App = () => {
   const [user, setuser] = useState({admin:false,user:false});
+
 useEffect(() => {
   if (auth.isSignInWithEmailLink(window.location.href)) {
   var email = window.localStorage.getItem("emailForSignIn");
@@ -30,10 +31,20 @@ useEffect(() => {
 
   auth.onAuthStateChanged((currentUser) => {
     if (currentUser) {
-      currentUser.user=true;
+console.log(currentUser);
+
+if(!currentUser.list)
+{
+  currentUser.list=[]
+  
+} 
+firestore.collection("users").doc(currentUser.uid).set({
+  email:currentUser.email,
+  list:currentUser.list
+})
+  currentUser.user=true;
   if (currentUser.email == "sidsahni00@gmail.com") {
     currentUser.admin = true;
-
   }
   else{
     currentUser.admin = false;
@@ -41,7 +52,6 @@ useEffect(() => {
   setuser(currentUser);
 
 }
-   
        
   });
 }, []);

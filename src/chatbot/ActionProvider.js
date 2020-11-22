@@ -1,4 +1,4 @@
-// ActionProvider starter code
+
 class ActionProvider {
   constructor(createChatBotMessage, setStateFunc, createClientMessage) {
     this.createChatBotMessage = createChatBotMessage;
@@ -7,6 +7,7 @@ class ActionProvider {
   }
  greet = () => {
   const message = this.createChatBotMessage("hello User how can i be of assistance",{widget:"options"});
+  
   this.addMessageToState(message);
 };
 rank = () => {
